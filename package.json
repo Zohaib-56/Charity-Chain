@@ -1,0 +1,23 @@
+{
+  "name": "charity-transparency-dapp",
+  "version": "1.0.0",
+  "description": "Blockchain-based charity transparency platform with milestone-based fund release",
+  "scripts": {
+    "compile":        "npx hardhat compile",
+    "test":           "npx hardhat test",
+    "test:coverage":  "npx hardhat coverage",
+    "deploy:local":   "npx hardhat run scripts/deploy.js --network localhost",
+    "deploy:sepolia": "npx hardhat run scripts/deploy.js --network sepolia",
+    "node":           "npx hardhat node",
+    "clean":          "npx hardhat clean"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "chai": "^4.3.10",
+    "hardhat": "^2.19.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}

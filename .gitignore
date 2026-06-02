@@ -1,0 +1,101 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+frontend/.env
+frontend/.env.local
+frontend/.env.development
+frontend/.env.test
+frontend/.env.production
+
+# Hardhat files
+cache/
+artifacts/
+typechain-types/
+
+# Testing
+coverage/
+coverage.json
+.coverage_artifacts/
+.coverage_cache/
+*.lcov
+
+# Build outputs
+dist/
+build/
+frontend/dist/
+frontend/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Hardhat Ignition default folder for deployments
+ignition/deployments/chain-*/
+
+# Gas reporter output
+gas-report.txt
+
+# Solidity coverage
+allFiredEvents
+scTopics
+
+# Vercel
+.vercel
+
+# Local Blockchain
+deployments/localhost/
+
+# ABIs (if auto-generated)
+# Uncomment if you auto-generate ABIs to frontend
+# frontend/src/abi/*.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Misc
+*.seed
+*.pid.lock
+.npm

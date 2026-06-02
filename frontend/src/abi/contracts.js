@@ -1,0 +1,53 @@
+// CharityFactory ABI — paste your compiled ABI here after running: npx hardhat compile
+// Located at: artifacts/contracts/CharityFactory.sol/CharityFactory.json → "abi" field
+
+export const CHARITY_FACTORY_ABI = [
+  "function owner() view returns (address)",
+  "function campaignCount() view returns (uint256)",
+  "function ngoCount() view returns (uint256)",
+  "function ngos(address) view returns (string name, string registrationNumber, string ipfsProfileHash, bool isVerified, bool isRegistered, uint256 registeredAt, address wallet)",
+  "function campaigns(uint256) view returns (address)",
+  "function isCampaign(address) view returns (bool)",
+  "function registerNGO(string _name, string _registrationNumber, string _ipfsProfileHash)",
+  "function verifyNGO(address _ngo)",
+  "function revokeNGO(address _ngo)",
+  "function createCampaign(string _title, string _description, string _category, uint256 _goalAmount, uint256 _durationDays, string[] _milestoneTitles, string[] _milestoneDescriptions, uint256[] _milestoneAmounts) returns (address)",
+  "function approveMilestone(address _campaign, uint256 _milestoneIndex)",
+  "function rejectMilestone(address _campaign, uint256 _milestoneIndex, string _reason)",
+  "function getAllNGOs() view returns (address[])",
+  "function getAllCampaigns() view returns (address[])",
+  "function getCampaignAddress(uint256 _id) view returns (address)",
+  "function getNGOInfo(address _ngo) view returns (tuple(string name, string registrationNumber, string ipfsProfileHash, bool isVerified, bool isRegistered, uint256 registeredAt, address wallet, uint256[] campaignIds))",
+  "function getNGOCampaigns(address _ngo) view returns (uint256[])",
+  "event NGORegistered(address indexed ngoWallet, string name, uint256 timestamp)",
+  "event NGOVerified(address indexed ngoWallet, uint256 timestamp)",
+  "event CampaignCreated(uint256 indexed campaignId, address indexed campaignAddress, address indexed ngo, string title, uint256 goalAmount, uint256 timestamp)",
+  "event MilestoneApproved(address indexed campaign, uint256 indexed milestoneIndex, uint256 amountReleased, uint256 timestamp)",
+  "event MilestoneRejected(address indexed campaign, uint256 indexed milestoneIndex, string reason, uint256 timestamp)",
+]
+
+// Campaign ABI
+export const CAMPAIGN_ABI = [
+  "function factory() view returns (address)",
+  "function ngo() view returns (address)",
+  "function campaignTitle() view returns (string)",
+  "function description() view returns (string)",
+  "function category() view returns (string)",
+  "function goalAmount() view returns (uint256)",
+  "function deadline() view returns (uint256)",
+  "function totalDonated() view returns (uint256)",
+  "function totalReleased() view returns (uint256)",
+  "function status() view returns (uint8)",
+  "function donate() payable",
+  "function submitMilestoneProof(uint256 _milestoneIndex, string _ipfsHash)",
+  "function getMilestoneCount() view returns (uint256)",
+  "function getMilestone(uint256 _index) view returns (tuple(string title, string description, uint256 targetAmount, uint256 releasedAmount, string proofIPFSHash, uint8 status, uint256 submittedAt, uint256 completedAt))",
+  "function getAllMilestones() view returns (tuple(string title, string description, uint256 targetAmount, uint256 releasedAmount, string proofIPFSHash, uint8 status, uint256 submittedAt, uint256 completedAt)[])",
+  "function getDonorList() view returns (address[])",
+  "function getDonorInfo(address _donor) view returns (tuple(uint256 totalDonated, uint256[] donationTimestamps, uint256[] donationAmounts))",
+  "function getContractBalance() view returns (uint256)",
+  "function getCampaignSummary() view returns (string title, string cat, address ngoAddr, uint256 goal, uint256 donated, uint256 released, uint256 balance, uint256 dline, uint8 cStatus, uint256 milestoneCount)",
+  "event DonationReceived(address indexed donor, uint256 amount, uint256 timestamp)",
+  "event ProofSubmitted(uint256 indexed milestoneIndex, string ipfsHash, uint256 timestamp)",
+  "event MilestoneCompleted(uint256 indexed milestoneIndex, uint256 amountReleased, uint256 timestamp)",
+]
