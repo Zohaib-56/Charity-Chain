@@ -392,9 +392,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions or issues:
 - Open an issue on GitHub
-- Contact: your-email@example.com
-- Twitter: [@YourHandle](https://twitter.com/yourhandle)
-
+- Contact: zohaib.matloob@gmail.com
 ---
 
 **Built with ❤️ for transparency in charitable giving**
